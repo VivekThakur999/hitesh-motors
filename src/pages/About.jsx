@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import ownerImage from "../assets/image.png"; // make sure this file exists
+import ownerImage from "../assets/hitesh.png"; // make sure this file exists
 
 const fadeUp = {
     hidden: { opacity: 0, y: 40 },
@@ -35,8 +35,7 @@ export default function About() {
 
     return (
         <section className="min-h-screen bg-black text-white">
-            <div className="mx-auto max-w-7xl px-6 py-16">
-
+            <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16">
                 {/* 🔴 ABOUT + OWNER SECTION */}
                 <div className="grid items-center gap-12 lg:grid-cols-2">
 
@@ -84,14 +83,16 @@ export default function About() {
                         animate="visible"
                         className="relative"
                     >
-                        <div className="absolute inset-0 bg-red-600/10 blur-3xl rounded-3xl"></div>
+                        <div className="absolute inset-0 rounded-3xl bg-red-600/10 blur-3xl"></div>
 
-                        <div className="relative overflow-hidden rounded-3xl border border-white/10">
-                            <img
-                                src={ownerImage}
-                                alt="Hitesh Motors Owner"
-                                className="h-[500px] w-full object-cover"
-                            />
+                        <div className="relative rounded-3xl border border-white/10 bg-neutral-900 p-4 sm:p-6">
+                            <div className="flex items-center justify-center overflow-hidden rounded-2xl bg-black">
+                                <img
+                                    src={ownerImage}
+                                    alt="Hitesh Motors Owner"
+                                    className="h-[320px] w-full object-contain sm:h-[420px] lg:h-[500px]"
+                                />
+                            </div>
                         </div>
                     </motion.div>
                 </div>
